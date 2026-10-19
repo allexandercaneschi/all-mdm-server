@@ -23,7 +23,7 @@ Para trocar cores, edite só as variáveis no topo de `all-theme.css`.
 
 ## Gerar uma versão
 
-1. Altere o arquivo `ALL_VERSION` (formato `<versão-headwind>-all.<n>`, ex.: `5.41.1-all.2`) e faça push na branch `all-branding`.
+1. Altere o arquivo `ALL_VERSION` (formato `<versão-headwind>-all.<n>`, ex.: `5.41.1-all.2`) e faça push na branch `all/main`.
 2. O GitHub Actions compila, cria a tag `v5.41.1-all.2` e publica `all-mdm-5.41.1-all.2.war` no Releases.
    Pushes que não mudam o `ALL_VERSION` só compilam (o WAR fica como artefato do workflow, para teste).
 3. No repositório `all-mdm` (Docker), aponte `HMDM_URL` para esse arquivo e suba a versão de lá também.
@@ -31,5 +31,5 @@ Para trocar cores, edite só as variáveis no topo de `all-theme.css`.
 ## Atualizar com a Headwind
 
 1. No GitHub, use **Sync fork** na branch `master`.
-2. Faça merge de `master` em `all-branding` e resolva conflitos (em geral só em `pt_PT.js` e `index.html`).
+2. Faça merge de `master` em `all/main` e resolva conflitos (em geral só em `pt_PT.js` e `index.html`).
 3. Suba o número em `ALL_VERSION` e faça push.

@@ -1,7 +1,7 @@
 # ALL MDM: compila o painel (WAR) com a marca da ALL Tecnologias.
 #
 # A versão fica no arquivo ALL_VERSION (ex.: 5.41.1-all.1).
-# - Todo push na branch "all-branding" compila e guarda o WAR como artefato do workflow.
+# - Todo push na branch "all/main" compila e guarda o WAR como artefato do workflow.
 # - Se ainda não existir release para a versão do ALL_VERSION, cria a tag v<versão>
 #   e publica o WAR no Releases, de onde a imagem Docker (repositório all-mdm) baixa o painel.
 #   Para lançar uma versão nova: altere ALL_VERSION e faça push.
@@ -9,7 +9,7 @@ name: Build ALL MDM WAR
 
 on:
   push:
-    branches: [all-branding]
+    branches: [all/main]
   workflow_dispatch:
 
 permissions:
