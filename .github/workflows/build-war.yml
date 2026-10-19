@@ -1,0 +1,54 @@
+# ALL MDM: compila o painel (WAR) com a marca da ALL Tecnologias.
+#
+# - Todo push na branch "all-branding" gera o WAR como artefato do workflow (para testar).
+# - Uma tag no formato v<versão-headwind>-all.<n> (ex.: v5.41.1-all.1) publica o WAR no Releases,
+#   de onde a imagem Docker (repositório all-mdm) baixa o painel.
+name: Build ALL MDM WAR
+
+on:
+  push:
+    branches: [all-branding]
+    tags: ['v*-all.*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+          cache: maven
+
+      - name: Compilar
+        run: |
+          cp server/build.properties.example server/build.properties
+          mvn -B -DskipTests install
+
+      - name: Nomear o WAR
+        id: war
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          [ "$GITHUB_REF_TYPE" = "tag" ] || VERSION="dev-${GITHUB_SHA::7}"
+          mkdir -p dist
+          cp server/target/launcher.war "dist/all-mdm-${VERSION}.war"
+          (cd dist && sha256sum *.war > SHA256SUMS)
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: all-mdm-war-${{ steps.war.outputs.version }}
+          path: dist/*
+
+      - name: Publicar no Releases
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

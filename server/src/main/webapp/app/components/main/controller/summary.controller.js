@@ -9,8 +9,8 @@ angular.module('headwind-kiosk')
             localization.localize('summary.devices.enrolled.monthly')
         ];
         $scope.enrollmentColors = [
-            '#DCDCDC',
-            '#97BBCD'
+            '#2a3750',
+            '#35a8e0'
         ];
 
         $scope.statusLabels = [
@@ -19,9 +19,9 @@ angular.module('headwind-kiosk')
             localization.localize('summary.devices.active')
         ];
         $scope.statusColors = [
-            '#F7464A',
-            '#FDB45C',
-            '#46BFBD'
+            '#f26b6b',
+            '#f5be4a',
+            '#3ccb7f'
         ];
 
         $scope.installLabels = [
@@ -33,7 +33,7 @@ angular.module('headwind-kiosk')
 
         $scope.monthlyEnrollColors = [];
         for (var i = 0; i < 12; i++) {
-            $scope.monthlyEnrollColors.push('#97BBCD');
+            $scope.monthlyEnrollColors.push('#35a8e0');
         }
 
         $scope.statusByConfigSeries = [
@@ -42,7 +42,7 @@ angular.module('headwind-kiosk')
             localization.localize('summary.devices.active')
         ];
         $scope.statusByConfigColors = [
-            '#F7464A', '#FDB45C', '#46BFBD'
+            '#f26b6b', '#f5be4a', '#3ccb7f'
         ];
 
         $scope.installByConfigSeries = [

@@ -950,9 +950,9 @@ document.localization ['hu_HU'] = {
     'breadcrumb.config.details': 'Részletek',
     'breadcrumb.application.versions': 'Verziók',
 
-    'app.name': 'Ellenszél MDM',
-    'app.vendor.name':"h-mdm.com",
-    'app.vendor.link':"https://h-mdm.com",
+    'app.name': 'ALL MDM',
+    'app.vendor.name':"ALL Tecnologias",
+    'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': 'egy nyílt forráskódú mobileszköz-kezelő rendszer',
     'app.title': '${appName} webpanel',
 

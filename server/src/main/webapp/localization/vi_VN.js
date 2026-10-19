@@ -984,9 +984,9 @@ document.localization ['vi_VN'] = {
     'breadcrumb.config.details': 'Chi tiết',
     'breadcrumb.application.versions': 'Phiên bản',
 
-    'app.name': 'Headwind MDM',
-    'app.vendor.name': "h-mdm.com",
-    'app.vendor.link': "https://h-mdm.com",
+    'app.name': 'ALL MDM',
+    'app.vendor.name': "ALL Tecnologias",
+    'app.vendor.link': "https://alltecnologias.com.br",
     'app.description': 'là một hệ thống quản lý thiết bị di động mã nguồn mở',
     'app.title': 'Bảng ${appName} Web',
 

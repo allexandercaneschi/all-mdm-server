@@ -623,13 +623,13 @@ angular.module('headwind-kiosk')
                             });
                             $scope.applications = response.data.filter(function (app) {
                                 // Application com.hmdm.launcher is made available by default when creating new configuration
-                                return app.action != '0' && (!app.system || $scope.showSystemApps) || (!configId && app.pkg === 'com.hmdm.launcher' && app.action != '2');
+                                return app.action != '0' && (!app.system || $scope.showSystemApps) || (!configId && (app.pkg === 'com.hmdm.launcher' || app.pkg === 'br.com.alltecnologias.mdm') && app.action != '2');
                             });
 
                             // For new configuration use default app for main app and content receiver
                             if (!configId) {
                                 let mainAppCandidates = response.data.filter(function (app) {
-                                    return app.pkg === 'com.hmdm.launcher' && app.action != '2';
+                                    return (app.pkg === 'com.hmdm.launcher' || app.pkg === 'br.com.alltecnologias.mdm') && app.action != '2';
                                 });
 
                                 if (mainAppCandidates.length > 0) {

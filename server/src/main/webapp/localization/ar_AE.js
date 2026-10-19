@@ -951,9 +951,9 @@ document.localization ['ar_AE'] = {
     'breadcrumb.config.details': 'تفاصيل',
     "breadcrumb.application.versions": 'إصدارات',
 
-    "app.name": 'Headwind MDM',
-    'app.vendor.name':"h-mdm.com",
-    'app.vendor.link':"https://h-mdm.com",
+    "app.name": 'ALL MDM',
+    'app.vendor.name':"ALL Tecnologias",
+    'app.vendor.link':"https://alltecnologias.com.br",
     "app.description": 'هو نظام إدارة الأجهزة المحمولة مفتوح المصدر',
     "app.title": '${appName} لوحة ويب',
 

@@ -951,9 +951,9 @@ document.localization[ 'ru_RU' ] = {
     'breadcrumb.config.details': 'Детали',
     'breadcrumb.application.versions': 'Версии',
 
-    'app.name': 'Headwind MDM',
-    'app.vendor.name':"h-mdm.com",
-    'app.vendor.link':"https://h-mdm.com",
+    'app.name': 'ALL MDM',
+    'app.vendor.name':"ALL Tecnologias",
+    'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': '- система управления мобильными устройствами с открытым кодом',
     'app.title': '${appName} - панель управления',
 

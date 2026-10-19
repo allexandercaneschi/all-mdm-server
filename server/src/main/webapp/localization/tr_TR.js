@@ -950,9 +950,9 @@ document.localization ['tr_TR'] = {
 	'breadcrumb.config.details': 'Ayrıntılar',
 	'breadcrumb.application.versions': 'Sürümler',
 
-	'app.name': 'Headwind MDM',
-	'app.vendor.name':"h-mdm.com",
-	'app.vendor.link':"https://h-mdm.com",
+	'app.name': 'ALL MDM',
+	'app.vendor.name':"ALL Tecnologias",
+	'app.vendor.link':"https://alltecnologias.com.br",
 	'app.description': 'açık kaynaklı bir mobil cihaz yönetim sistemidir',
 	'app.title': '${appName} Web Paneli',
 
