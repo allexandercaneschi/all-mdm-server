@@ -17,17 +17,19 @@ O código da Headwind fica intacto; as mudanças se limitam à aparência, aos t
 | `server/src/main/webapp/app/components/main/controller/summary.controller.js` | Cores do semáforo nos gráficos do resumo |
 | `server/src/main/webapp/app/components/main/controller/configurations.controller.js` | Reconhece o agente ALL (`br.com.alltecnologias.mdm`) ao criar configurações |
 | `.github/workflows/build-war.yml` | Compila o WAR e publica no Releases |
+| `ALL_VERSION` | Versão do painel ALL (muda aqui para lançar uma versão nova) |
 
 Para trocar cores, edite só as variáveis no topo de `all-theme.css`.
 
 ## Gerar uma versão
 
-1. Crie uma tag no formato `v<versão-headwind>-all.<n>`, por exemplo `v5.41.1-all.1`, e envie para o GitHub.
-2. O GitHub Actions compila e publica `all-mdm-5.41.1-all.1.war` no Releases.
-3. No repositório `all-mdm` (Docker), aponte `HMDM_URL` para esse arquivo e gere a imagem.
+1. Altere o arquivo `ALL_VERSION` (formato `<versão-headwind>-all.<n>`, ex.: `5.41.1-all.2`) e faça push na branch `all-branding`.
+2. O GitHub Actions compila, cria a tag `v5.41.1-all.2` e publica `all-mdm-5.41.1-all.2.war` no Releases.
+   Pushes que não mudam o `ALL_VERSION` só compilam (o WAR fica como artefato do workflow, para teste).
+3. No repositório `all-mdm` (Docker), aponte `HMDM_URL` para esse arquivo e suba a versão de lá também.
 
 ## Atualizar com a Headwind
 
 1. No GitHub, use **Sync fork** na branch `master`.
 2. Faça merge de `master` em `all-branding` e resolva conflitos (em geral só em `pt_PT.js` e `index.html`).
-3. Gere uma tag nova.
+3. Suba o número em `ALL_VERSION` e faça push.
