@@ -25,7 +25,7 @@ angular.module('headwind-kiosk')
         return {
             query: function(callback) {
                 var data;
-                var cookieData = $cookies.get('rebranding');
+                var cookieData = $cookies.get('all-rebranding');
                 if (cookieData) {
                     data = JSON.parse(cookieData);
                     data = fixEmptyValue(data);
@@ -37,7 +37,7 @@ angular.module('headwind-kiosk')
                         if (response.status === "OK") {
                             var value = response.data;
                             value = fixEmptyValue(value);
-                            $cookies.put('rebranding', JSON.stringify(value));
+                            $cookies.put('all-rebranding', JSON.stringify(value));
                             callback(value);
                         } else {
                             callback(defaultValue);

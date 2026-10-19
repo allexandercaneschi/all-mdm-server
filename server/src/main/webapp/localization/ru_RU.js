@@ -951,7 +951,7 @@ document.localization[ 'ru_RU' ] = {
     'breadcrumb.config.details': 'Детали',
     'breadcrumb.application.versions': 'Версии',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': '- система управления мобильными устройствами с открытым кодом',

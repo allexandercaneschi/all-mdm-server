@@ -950,10 +950,10 @@ document.localization ['en_US'] = {
     'breadcrumb.config.details': 'Details',
     'breadcrumb.application.versions': 'Versions',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
-    'app.description': 'is the ALL Tecnologias mobile device management platform, based on open source Headwind MDM',
+    'app.description': 'is the mobile device management platform by ALL Tecnologias, based on open source Headwind MDM',
     'app.title': '${appName} Web Panel',
 
     'box.show.my.apps.only': 'Display my applications only',

@@ -951,7 +951,7 @@ document.localization ['fr_FR'] = {
     'breadcrumb.config.details': 'Détails',
     'breadcrumb.application.versions': 'Versions',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': 'est le système de gestion des appareils mobiles open source',

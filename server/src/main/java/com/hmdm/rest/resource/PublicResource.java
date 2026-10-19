@@ -305,7 +305,7 @@ public class PublicResource {
                     return javax.ws.rs.core.Response.status(javax.ws.rs.core.Response.Status.NOT_FOUND).build();
                 }
             } else {
-                return javax.ws.rs.core.Response.temporaryRedirect(new URI("../images/logo.png")).build();
+                return javax.ws.rs.core.Response.temporaryRedirect(new URI("../images/all/logo.png")).build();
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -950,7 +950,7 @@ document.localization ['hu_HU'] = {
     'breadcrumb.config.details': 'Részletek',
     'breadcrumb.application.versions': 'Verziók',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': 'egy nyílt forráskódú mobileszköz-kezelő rendszer',

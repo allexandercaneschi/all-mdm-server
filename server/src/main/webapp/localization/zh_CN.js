@@ -951,7 +951,7 @@ document.localization ['zh_CN'] = {
     'breadcrumb.config.details' : "详情",
     'breadcrumb.application.versions':"版本",
 		
-    'app.name':'ALL MDM',
+    'app.name':'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description':"开源码流动设备管理系统",

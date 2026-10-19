@@ -951,7 +951,7 @@ document.localization ['ar_AE'] = {
     'breadcrumb.config.details': 'تفاصيل',
     "breadcrumb.application.versions": 'إصدارات',
 
-    "app.name": 'ALL MDM',
+    "app.name": 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     "app.description": 'هو نظام إدارة الأجهزة المحمولة مفتوح المصدر',

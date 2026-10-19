@@ -951,7 +951,7 @@ document.localization ['es_ES'] = {
     'breadcrumb.config.details': 'Detalles',
     'breadcrumb.application.versions': 'Versiones',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': 'es la solucion MDM open-source',

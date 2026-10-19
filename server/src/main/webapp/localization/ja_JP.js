@@ -951,7 +951,7 @@ document.localization ['ja_JP'] = {
     'breadcrumb.config.details': '詳細',
     'breadcrumb.application.versions': 'バージョン',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
     'app.description': 'is the open source mobile device management system',

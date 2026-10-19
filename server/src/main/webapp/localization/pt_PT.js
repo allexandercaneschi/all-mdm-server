@@ -951,11 +951,11 @@ document.localization ['pt_PT'] = {
     'breadcrumb.config.details': 'Detalhes',
     'breadcrumb.application.versions': 'Versões',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name':"ALL Tecnologias",
     'app.vendor.link':"https://alltecnologias.com.br",
-    'app.description': 'é a gestão de celulares da ALL Tecnologias, baseada no Headwind MDM (código aberto)',
-    'app.title': 'Painel Web ${appName}',
+    'app.description': 'é a plataforma de gestão de celulares da ALL Tecnologias, baseada no Headwind MDM (código aberto)',
+    'app.title': '${appName}',
 
     'box.show.my.apps.only': 'Mostrar apenas minhas aplicações',
     'configuration.app.version.upgrade.message': 'Versão instalada ${installedVersion}, versão disponível ${latestVersion}',

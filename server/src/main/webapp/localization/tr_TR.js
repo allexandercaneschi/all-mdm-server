@@ -950,7 +950,7 @@ document.localization ['tr_TR'] = {
 	'breadcrumb.config.details': 'Ayrıntılar',
 	'breadcrumb.application.versions': 'Sürümler',
 
-	'app.name': 'ALL MDM',
+	'app.name': 'ALL Tecnologias MDM',
 	'app.vendor.name':"ALL Tecnologias",
 	'app.vendor.link':"https://alltecnologias.com.br",
 	'app.description': 'açık kaynaklı bir mobil cihaz yönetim sistemidir',

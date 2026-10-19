@@ -984,7 +984,7 @@ document.localization ['vi_VN'] = {
     'breadcrumb.config.details': 'Chi tiết',
     'breadcrumb.application.versions': 'Phiên bản',
 
-    'app.name': 'ALL MDM',
+    'app.name': 'ALL Tecnologias MDM',
     'app.vendor.name': "ALL Tecnologias",
     'app.vendor.link': "https://alltecnologias.com.br",
     'app.description': 'là một hệ thống quản lý thiết bị di động mã nguồn mở',
