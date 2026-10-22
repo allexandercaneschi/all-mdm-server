@@ -178,7 +178,9 @@ public class OidcAuthResource {
 
             // Same steps as the password login (AuthResource.login), without the second factor:
             // the identity provider is responsible for it.
-            req.changeSessionId();
+            // New session id after login (servlet 2.5 has no changeSessionId)
+            session.invalidate();
+            session = req.getSession(true);
             this.taskRunner.submitTask(() -> {
                 this.customerDAO.recordLastLoginTime(user.getCustomerId(), System.currentTimeMillis());
             });
