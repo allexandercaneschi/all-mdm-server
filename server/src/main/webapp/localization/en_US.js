@@ -7,6 +7,8 @@ document.localization ['en_US'] = {
     'login.password.placeholder': 'Enter password',
     'login.submit': 'Login',
     'login.password.incorrect': 'Invalid username or password',
+    'login.sso.failed': 'Single sign-on failed. Please try again.',
+    'login.sso.nouser': 'There is no MDM user with your e-mail. Ask the administrator to create your access.',
     'login.password.recovery': 'Lost password?',
     'recovery.password': 'Recover password',
     'recovery.password.success': 'Password recovery instructions have been sent to your email',

@@ -1,6 +1,6 @@
 <!-- Localization completed -->
 angular.module('headwind-kiosk')
-    .controller('LoginController', function ($scope, $state, $rootScope, $timeout, authService, localization,
+    .controller('LoginController', function ($scope, $state, $stateParams, $rootScope, $timeout, authService, localization,
                                              rebranding, getBrowserLanguage) {
         $scope.login = {};
         $scope.transmitPassword = false;
@@ -25,6 +25,28 @@ angular.module('headwind-kiosk')
         });
 
         $scope.isIE = detectIE();
+
+        // ALL Tecnologias: login via Authentik (OIDC)
+        authService.oidcOptions(function (response) {
+            if (response.status === 'OK') {
+                $scope.oidc = response.data;
+            }
+        });
+
+        if ($stateParams.sso === 'ok') {
+            authService.oidcLogin(function (response) {
+                if (response.status === 'OK') {
+                    $state.transitionTo('main');
+                    $rootScope.$emit('aero_USER_AUTHENTICATED');
+                } else {
+                    $scope.errorMessage = localization.localize('login.sso.failed');
+                }
+            });
+        } else if ($stateParams.sso === 'nouser') {
+            $scope.errorMessage = localization.localize('login.sso.nouser');
+        } else if ($stateParams.sso === 'failed') {
+            $scope.errorMessage = localization.localize('login.sso.failed');
+        }
 
         var loginHandler = function (response) {
             if (response.status === 'OK') {
