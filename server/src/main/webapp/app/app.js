@@ -283,7 +283,7 @@ angular.module('headwind-kiosk',
                 }
             })
             .state('login', {
-                url: '/login',
+                url: '/login?sso',
                 templateUrl: 'app/components/main/view/login.html',
                 controller: 'LoginController'
             })

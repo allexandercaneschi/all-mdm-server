@@ -23,6 +23,22 @@ angular.module('headwind-kiosk')
                 serverAuthService.options(successCallback);
             },
 
+            // ALL Tecnologias: login via Authentik (OIDC)
+            oidcOptions: function(successCallback) {
+                serverAuthService.oidcOptions(successCallback);
+            },
+
+            oidcLogin: function (successCallback) {
+                serverAuthService.oidcUser(function (response) {
+                    if (response.status === "OK") {
+                        user = response.data;
+                        $cookies.put('user', JSON.stringify(user));
+                    }
+
+                    successCallback(response);
+                });
+            },
+
             hasPermission: function (permission) {
                 if (user) {
                     if (user.userRole) {
@@ -91,6 +107,8 @@ angular.module('headwind-kiosk')
         return $resource('rest/public/auth/', {}, {
             login: {url: 'rest/public/auth/login', method: 'POST'},
             logout: {url: 'rest/public/auth/logout', method: 'POST'},
-            options: {url: 'rest/public/auth/options', method: 'GET'}
+            options: {url: 'rest/public/auth/options', method: 'GET'},
+            oidcOptions: {url: 'rest/public/auth/oidc/options', method: 'GET'},
+            oidcUser: {url: 'rest/public/auth/oidc/user', method: 'GET'}
         });
     });

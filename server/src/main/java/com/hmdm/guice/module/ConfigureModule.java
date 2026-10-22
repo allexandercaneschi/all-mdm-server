@@ -84,6 +84,11 @@ public class ConfigureModule extends AbstractModule {
     private final String emailSignupCompleteBody = "email.signup.complete.body";
     private final String ldapAdminBind = "ldap.admin.bind";
     private final String ldapHost = "ldap.host";
+    // ALL Tecnologias: login via Authentik (OIDC)
+    private final String oidcIssuer = "oidc.issuer";
+    private final String oidcClientId = "oidc.client.id";
+    private final String oidcClientSecret = "oidc.client.secret";
+    private final String oidcButtonLabel = "oidc.button.label";
     private final String ldapPort = "ldap.port";
     private final String ldapBaseDn = "ldap.base.dn";
     private final String ldapAdminDn = "ldap.admin.dn";
@@ -242,6 +247,14 @@ public class ConfigureModule extends AbstractModule {
         opt = this.context.getInitParameter(ldapAdminBind);
         this.bindConstant().annotatedWith(Names.named(ldapAdminBind)).to(
                 opt != null && (opt.equals("1") || opt.equalsIgnoreCase("true")));
+        opt = this.context.getInitParameter(oidcIssuer);
+        this.bindConstant().annotatedWith(Names.named(oidcIssuer)).to(opt != null ? opt : "");
+        opt = this.context.getInitParameter(oidcClientId);
+        this.bindConstant().annotatedWith(Names.named(oidcClientId)).to(opt != null ? opt : "");
+        opt = this.context.getInitParameter(oidcClientSecret);
+        this.bindConstant().annotatedWith(Names.named(oidcClientSecret)).to(opt != null ? opt : "");
+        opt = this.context.getInitParameter(oidcButtonLabel);
+        this.bindConstant().annotatedWith(Names.named(oidcButtonLabel)).to(opt != null && !opt.isEmpty() ? opt : "Entrar com SSO");
         opt = this.context.getInitParameter(ldapHost);
         this.bindConstant().annotatedWith(Names.named(ldapHost)).to(opt != null ? opt : "");
         opt = this.context.getInitParameter(ldapPort);

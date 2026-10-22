@@ -7,6 +7,8 @@ document.localization ['pt_PT'] = {
     'login.password.placeholder': 'Insira sua senha',
     'login.submit': 'Login',
     'login.password.incorrect': 'Usuário ou senha inválidos',
+    'login.sso.failed': 'Não foi possível entrar com o login único. Tente novamente.',
+    'login.sso.nouser': 'Não há usuário do MDM com o seu e-mail. Peça ao administrador para criar seu acesso.',
     'login.password.recovery': 'Esqueceu a senha?',
     'recovery.password': 'Recuperar senha',
     'recovery.password.success': 'As instruções de recuperação de senha foram enviadas para seu e-mail',
